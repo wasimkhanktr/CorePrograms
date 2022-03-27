@@ -10,14 +10,24 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a 4 digit no");
-            int year = Convert.ToInt32(Console.ReadLine());
-            if (year % 400 == 0)
-                Console.WriteLine("Leap year");
-            else if (year % 4 == 0 && year % 100 != 0)
-                Console.WriteLine("Leap year");
-            else
-                Console.WriteLine("Not Leap Year");
+            Console.WriteLine("Enter the no of times to flip coin");
+            int noOfTimesCoinsFlipped = Convert.ToInt32(Console.ReadLine());
+            Random random = new Random();
+            int heads = 0, tails = 0;
+            int temp = noOfTimesCoinsFlipped;
+            while (noOfTimesCoinsFlipped > 0)
+            {
+                if (random.NextDouble() <= 0.5)
+                    heads++;
+                else
+                    tails++;
+                noOfTimesCoinsFlipped--;
+            }
+            noOfTimesCoinsFlipped = temp;
+            double percentageOfHead = heads * 100.0 / noOfTimesCoinsFlipped;
+            double percentageOfTail = tails * 100.0 / noOfTimesCoinsFlipped;
+            Console.WriteLine("Percentage of Head is " + percentageOfHead);
+            Console.WriteLine("Percentage of tail is " + percentageOfTail);
         }
     }
 }

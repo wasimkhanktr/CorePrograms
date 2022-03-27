@@ -10,14 +10,14 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Harmonic you want to find");
-            int number = Convert.ToInt32(Console.ReadLine());
-            double result = 0;
-            for (double i = 1; i <= number; i++)
-            {
-                result += 1 / i;
-            }
-            Console.WriteLine("The Value of Harmonic " + number + " is " + result);
+            int dividend, divisor, quotient, remainder;
+            Console.WriteLine("Enter Dividend and divisor");
+            dividend = Convert.ToInt32(Console.ReadLine());
+            divisor = Convert.ToInt32(Console.ReadLine());
+            quotient = dividend / divisor;
+            remainder = dividend % divisor;
+            Console.WriteLine("Quotient is " + quotient);
+            Console.WriteLine("Remainder is " + remainder);
         }
     }
 }

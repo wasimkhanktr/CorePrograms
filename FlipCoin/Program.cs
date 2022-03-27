@@ -10,13 +10,13 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter three numbers");
+            Console.WriteLine("Enter Two numbers");
             int no1 = Convert.ToInt32(Console.ReadLine());
             int no2 = Convert.ToInt32(Console.ReadLine());
-            int no3 = Convert.ToInt32(Console.ReadLine());
-            no1 = Math.Max(no1, no2);
-            no1 = Math.Max(no1, no3);
-            Console.WriteLine("The Largest no is " + no1);
+            int temp = no1;
+            no1 = no2;
+            no2 = temp;
+            Console.WriteLine("No1 is " + no1 + "\nNo2 is " + no2);
         }
     }
 }

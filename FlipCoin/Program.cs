@@ -10,14 +10,12 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            int dividend, divisor, quotient, remainder;
-            Console.WriteLine("Enter Dividend and divisor");
-            dividend = Convert.ToInt32(Console.ReadLine());
-            divisor = Convert.ToInt32(Console.ReadLine());
-            quotient = dividend / divisor;
-            remainder = dividend % divisor;
-            Console.WriteLine("Quotient is " + quotient);
-            Console.WriteLine("Remainder is " + remainder);
+            Console.WriteLine("Enter an alphabet");
+            string alphabet = Console.ReadLine();
+            if (alphabet == "i" || alphabet == "a" || alphabet == "e" || alphabet == "o" || alphabet == "u")
+                Console.WriteLine("Alphabet is vowel");
+            else
+                Console.WriteLine("Alphabet is not vowel");
         }
     }
 }

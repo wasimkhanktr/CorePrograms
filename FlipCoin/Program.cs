@@ -10,13 +10,19 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Two numbers");
-            int no1 = Convert.ToInt32(Console.ReadLine());
-            int no2 = Convert.ToInt32(Console.ReadLine());
-            int temp = no1;
-            no1 = no2;
-            no2 = temp;
-            Console.WriteLine("No1 is " + no1 + "\nNo2 is " + no2);
+            Console.WriteLine("Enter the value of n between 0 and 31");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int year, ans = 1;
+            for (int i = 0; i < n; i++)
+                ans = ans * 2;
+            year = ans;
+            Console.WriteLine(ans);
+            if (year % 400 == 0)
+                Console.WriteLine("Leap year");
+            else if (year % 4 == 0 && year % 100 != 0)
+                Console.WriteLine("Leap year");
+            else
+                Console.WriteLine("Not Leap Year");
         }
     }
 }

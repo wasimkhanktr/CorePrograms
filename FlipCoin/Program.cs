@@ -10,12 +10,14 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a no");
-            int no = Convert.ToInt32(Console.ReadLine());
-            if (no % 2 == 0)
-                Console.WriteLine("Even No");
-            else
-                Console.WriteLine("Odd No");
+            Console.WriteLine("Enter the Harmonic you want to find");
+            int number = Convert.ToInt32(Console.ReadLine());
+            double result = 0;
+            for (double i = 1; i <= number; i++)
+            {
+                result += 1 / i;
+            }
+            Console.WriteLine("The Value of Harmonic " + number + " is " + result);
         }
     }
 }

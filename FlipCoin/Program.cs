@@ -10,12 +10,13 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter an alphabet");
-            string alphabet = Console.ReadLine();
-            if (alphabet == "i" || alphabet == "a" || alphabet == "e" || alphabet == "o" || alphabet == "u")
-                Console.WriteLine("Alphabet is vowel");
-            else
-                Console.WriteLine("Alphabet is not vowel");
+            Console.WriteLine("Enter three numbers");
+            int no1 = Convert.ToInt32(Console.ReadLine());
+            int no2 = Convert.ToInt32(Console.ReadLine());
+            int no3 = Convert.ToInt32(Console.ReadLine());
+            no1 = Math.Max(no1, no2);
+            no1 = Math.Max(no1, no3);
+            Console.WriteLine("The Largest no is " + no1);
         }
     }
 }
